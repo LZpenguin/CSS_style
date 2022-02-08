@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.background {
+  position: relative;
+  height: 200vh;
+  font-size: 18vw;
+  font-weight: 900;
+  text-align: center;
+  background-image: url('./bg.png');
+  background-size: cover;
+  background-position: 60% 50%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  overflow: hidden;
+  padding-top: 40vh;
+}
+.background::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: inherit;
+  background-size: cover;
+  background-position: 50% 50%;
+  z-index: -99;
+}

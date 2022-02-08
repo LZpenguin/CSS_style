@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Bad Script', cursive;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #111;
+}
+h2 {
+  display: flex;
+  color: transparent;
+  font-size: 10vw;
+}
+h2 span {
+  animation: blink 3s linear infinite;
+  animation-delay: calc(var(--i) * 0.1s);
+}
+@keyframes blink {
+  0% {
+    color: #fff;
+    filter: blur(2px) hue-rotate(0deg);
+    text-shadow: 0 0 10px #fb8472, 0 0 20px #fb8472, 0 0 40px #fb8472, 0 0 80px #fb8472, 0 0 120px #fb8472, 0 0 200px #fb8472, 0 0 300px #fb8472, 0 0 400px #fb8472;
+  }
+  30%,
+  70% {
+    color: #fff;
+    filter: blur(0px) hue-rotate(360deg);
+    text-shadow: 0 0 10px #fb8472, 0 0 20px #fb8472, 0 0 40px #fb8472, 0 0 80px #fb8472, 0 0 120px #fb8472, 0 0 200px #fb8472;
+  }
+  100% {
+    color: transparent;
+    box-shadow: none;
+    filter: blur(2px) hue-rotate(0deg);
+  }
+}

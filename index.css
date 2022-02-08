@@ -1,0 +1,92 @@
+:root {
+  --c10: #ffffff;
+  --c11: #77c9d4;
+  --c12: #57bc90;
+  --c13: #015249;
+  --c14: #a5a5af;
+
+  --margin1: 160px;
+  --margin2: 40px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: var(--c13);
+}
+a:hover {
+  color: var(--c11);
+}
+body {
+  height: 200vh;
+  background: linear-gradient(135deg, var(--c11), var(--c12));
+}
+
+/* 导航栏 */
+.navigation {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100vw;
+  height: 60px;
+  margin-bottom: 20px;
+  background: var(--c10);
+}
+.space {
+  flex: 1 1 0;
+  order: 1;
+}
+.navigation .info {
+  order: 10;
+  height: 100%;
+  width: 240px;
+  background-color: var(--c11);
+}
+
+/* 主体 */
+.main {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* 左侧栏 */
+.left {
+  width: 200px;
+  margin-left: var(--margin1);
+  background-color: transparent;
+}
+.left a {
+  display: block;
+}
+.left a span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 5px;
+  background-color: var(--c12);
+  font-size: 16px;
+  font-weight: 600;
+}
+.left a:last-child span {
+  margin-bottom: 0;
+}
+
+/* 中间区 */
+.center {
+  flex: 1;
+  height: 400px;
+  margin: 0 var(--margin2) 0;
+  background-color: var(--c12);
+}
+
+/* 右侧栏 */
+.right {
+  width: 200px;
+  height: 200px;
+  margin-right: var(--margin1);
+  background-color: var(--c12);
+}
